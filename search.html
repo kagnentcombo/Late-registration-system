@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		
+		<title>Search</title>
+		
+		<title>UI form 1.0</title>
+	</head>
+	
+	
+	
+	<body onload="loadDoc()">
+			
+		<h1>ประวัตินักศึกษาที่ต้องการเพิ่ม/ถอน</h1>
+			
+		
+			<label for="searchName">Student Name</label>
+			<input id="searchName" type="text">
+			<label for="searchNum">เลขทะเบียน</label>
+			<input id="searchNum" type="text"><br>
+			
+		
+			<button type="button" onclick="search()">Search</button>
+
+			<br><br>
+			<h3>รายชื่อนักศึกษา</h3>
+			<ul id="studentList">
+				
+			</ul>
+	</body>
+
+	<script src='search.js'></script>
+	
+</html>

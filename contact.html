@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<style type="text/css">
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+html, body
+{
+    width: 100%;
+    height: 100%;
+}
+body {
+    height: 100vh;
+    margin:0;
+    padding:0;
+    background-color:rgb(255, 209, 63);
+}
+
+.leftBar {
+    background-color:rgb(195, 0, 47);
+    width: 250px;
+    height: 210%;
+    position:absolute;
+    background-attachment: fixed;
+    
+}
+
+.profile {
+    width:250px;
+    height:200px;
+    background-color:lightgray;
+    margin-top:-80%;
+}
+
+.profile img {
+    position:relative;
+    margin-left:30%;
+    margin-top: 10%;
+    
+    
+}
+
+.profile p {
+    text-align:center;
+    line-height: 10px;
+}
+
+.list button {
+    margin-left:9%;
+    margin-top: 7%;
+    background-color:rgb(255, 209, 63);
+    width:200px;
+    height:50px;
+}
+
+.topPage {
+    background-color:rgb(195, 0, 47);
+    width:100%;
+    height:200px;
+    z-index:-2;
+}
+
+.topPage img{
+    margin-left:52%;
+    margin-top:1%;
+}
+
+.topPage p {
+    font-size:18px;
+    z-index:2px;
+    text-align:center;
+    padding-left:18%;
+    padding-top:10px;
+    margin-top:-5px;
+    color:white;
+    font-family: cursive;
+}
+.R{
+    
+    margin-top: 30px ;
+    text-align:center;
+    margin-right: 20px;
+    line-height:40px;
+    margin-left:20%;
+    position:relative;
+}
+
+#day {
+    margin-left:80%;
+}
+
+#day_tag {
+    margin-left:80%;
+}
+
+.L{
+    margin-top: 30px ;
+    text-align:left;
+    margin-left: 10px;
+}
+
+.R input {
+    border-radius:2px;
+    border:none;
+    border-bottom:2px solid black;
+    background-color:rgb(212, 209, 200) ;
+}
+
+#add_btn {
+    background-color:rgb(75, 196, 75);
+    border:none;
+}
+
+#add_btn2 {
+    background-color:rgb(75, 196, 75);
+    border:none;
+}
+
+#remove_btn {
+    border:none;
+    background-color:rgb(214, 80, 80);
+}
+
+#remove_btn2 {
+    border:none;
+    background-color:rgb(214, 80, 80);
+
+}
+
+
+#table {
+    margin-left:12%;
+    border-collapse: collapse;
+    
+    
+}
+#table2 {
+    margin-left:11%;
+    border-collapse: collapse;
+    
+}
+
+th,td {
+    border:2px solid black;
+}
+</style>
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>UI form 1.0</title>
+     
+</head>
+<body>
+
+    <div class="topPage">
+        <img src="tu.png" alt="Thammasat-Logo" width="140" height="140">
+        <p><b>รายชื่อการติดต่ออาจารย์ คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยธรรมศาสตร์ ศูนย์รังสิต</b></p>
+        
+    </div> 
+    
+    <div class="leftBar" id="bar">
+        <div class="profile">
+        <img src="mr-anonymous.png" alt="profile-pic" width="100" height="90">
+        <p>นายรักโดม ธรรมศาสตร์</p>
+        <p>6309123567</p>
+        </div>
+        
+        <div class="list">
+            <button>ประวัตินักศึกษา</button>
+            <button>ตารางเรียน</button>
+            <button onclick="location.href='index.html'">เพิ่ม-ถอนรายวิชาล่าช้า</button>
+            <button>คู่มือการจดทะเบียน</button>
+            <button onclick="location.href='contact.html'">ติดต่ออาจารย์ที่เกี่ยวข้อง</button>
+            <button>ติดตามผลคำร้อง</button>
+            <button>ประเมินผู้สอน</button>
+            <button onclick="location.href='Userstory1.html'">ออกจากระบบ</button>
+        </div>
+    </div>
+
+    <div class="R">
+        <form>
+              
+ 	
+   
+   <hr></hr>
+
+<img  src="t1.jpg" width="209" height="258" />&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+<img  src="t2.jpg" width="209" height="258" />&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+&emsp;&emsp;&emsp;&emsp;
+<img   src="t3.jpg" width="209" height="258" />
+<p style="font-family:verdana">
+
+ <b>รศ.ดร.เยาวดี เต็มธนาภัทร์</b>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;
+<b>ผศ.ดร.กษิดิศ ชาญเชี่ยว</b>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;
+<b>รศ.ดร.ณัฐธนนท์ หงส์วริทธิ์ธร</b> 
+
+
+
+<br><br>
+<img  src="Location.png" width=20" height="20"/>อาคาร LC-2 ชั้น 2 ห้อง 210&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;&ensp;&ensp;&ensp;
+<img  src="Location.png" width=20" height="20"/>อาคาร LC-2 ชั้น 2 ห้อง 210&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;&ensp;&nbsp;&nbsp;
+<img  src="Location.png" width=20" height="20"/>อาคาร LC-2 ชั้น 2 ห้อง 210
+<br>
+
+
+ <img  src="call.png"width=20" height="20" />02-564-4444 ต่อ 2157 ต่อ 208&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;&ensp;&nbsp;
+ <img  src="call.png"width=20" height="20" />02-564-4444 ต่อ 2157 ต่อ 200&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;
+ <img  src="call.png"width=20" height="20" />02-564-4444 ต่อ 2157 ต่อ 229
+
+
+
+<br>
+ <img  src="mail.png"width=22" height="15" />tyaowade@staff.tu.ac.th&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;&ensp;&ensp;&emsp;&emsp;&ensp;
+ <img  src="mail.png"width=22" height="15" />ckasidit@staff.tu.ac.th&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;&ensp;&emsp;&emsp;&emsp;&ensp;
+ <img  src="mail.png"width=22" height="15" />nuttanon@staff.tu.ac.th
+<br><br><br>
+
+
+
+
+
+
+
+
+
+<img  src="t4.jpg"  width="209" height="258"/>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+&emsp;&emsp;&emsp;&emsp;
+<img  src="t5.jpg"  width="209" height="258"/>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+&emsp;&emsp;&emsp;&emsp;&emsp;
+<img  src="t6.jpg" width="209" height="258" />
+<p style="font-family:verdana">
+
+<b>ผศ.ดร.เด่นดวง ประดับสุวรรณ</b>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+<b>ผศ.ดร.ทรงศักดิ์ รองวิริยะพานิช</b>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+<b>ผศ.ดร.ปกรณ์ ลี้สุทธิพรชัย</b>
+
+
+
+<br><br>
+<img  src="Location.png" width=20" height="20"/>อาคาร LC-2 ชั้น 2 ห้อง 210&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;&ensp;&ensp;
+<img  src="Location.png" width=20" height="20"/>อาคาร LC-2 ชั้น 2 ห้อง 223&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;&ensp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img  src="Location.png" width=20" height="20"/>อาคาร LC-2 ชั้น 2 ห้อง 210
+<br>
+
+
+ <img  src="call.png"width=20" height="20" />02-564-4444 ต่อ 2157 ต่อ 203&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&ensp;&ensp;&ensp;&nbsp;
+ <img  src="call.png"width=20" height="20" />02-564-4444 ต่อ 2157 ต่อ 204&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <img  src="call.png"width=20" height="20" />02-564-4444 ต่อ 2157 ต่อ 206
+
+
+
+<br>
+ <img  src="mail.png"width=22" height="15" />denduang@staff.tu.ac.th&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;&ensp;&ensp;&emsp;&nbsp;&nbsp;
+ <img  src="mail.png"width=22" height="15" />rongviri@staff.tu.ac.th&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;&ensp;&emsp;&emsp;&emsp;&ensp;&nbsp;&nbsp;
+ <img  src="mail.png"width=22" height="15" />pakornl@staff.tu.ac.th
+<br><br><br>
+
+
+
+
+
+
+
+<img  src="t7.jpg" width="209" height="258" />&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+&emsp;&emsp;&emsp;&emsp;
+<img  src="t8.jpg"width="209" height="258"  />&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+&emsp;&emsp;&emsp;&emsp;&emsp;
+<img  src="t9.jpg"width="209" height="258"  />
+<p style="font-family:verdana">
+
+  <b>ผศ.ดร.วิลาวรรณ รักผกาวงศ์</b>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;  
+<b>ผศ.ดร.วรวรรณ ดีอัซ การ์บาโย</b>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;
+<b>ผศ.ดร.ธนาธร ทะนานทอง</b>
+
+
+
+<br><br>
+<img  src="Location.png" width=20" height="20"/>อาคาร LC-2 ชั้น 2 ห้อง 210&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img  src="Location.png" width=20" height="20"/>ประจำที่ศูนย์ลำปาง&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img  src="Location.png" width=20" height="20"/>อาคาร LC-2 ชั้น 2 ห้อง 210
+<br>
+
+
+ <img  src="call.png"width=20" height="20" />02-564-4444 ต่อ 2157 ต่อ 216&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&ensp;&ensp;&ensp;&nbsp;
+ <img  src="call.png"width=20" height="20" />0-5426-8701 ต่อ 5626&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <img  src="call.png"width=20" height="20" />02-564-4444 ต่อ 2157 ต่อ 207
+
+
+
+<br>
+ <img  src="mail.png"width=22" height="15" />wilawan@cs.tu.ac.th&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;&ensp;&ensp;&emsp;&emsp;&ensp;&nbsp;&nbsp;&nbsp;
+ <img  src="mail.png"width=22" height="15" />papong@staff.tu.ac.th&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;&ensp;&emsp;&emsp;&emsp;&ensp;&nbsp;&nbsp;&nbsp;
+ <img  src="mail.png"width=22" height="15" />tanatorn@staff.tu.ac.th
+<br><br><br>
+
+
+
+
+
+<img  src="t10.jpg"  width="209" height="258"/>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+&emsp;&emsp;&emsp;&emsp;
+<img  src="t11.jpg"  width="209" height="258"/>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+&emsp;&emsp;&emsp;&emsp;&emsp;
+<img  src="t12.jpg"  width="209" height="258"/>
+<p style="font-family:verdana">
+
+  <b>ผศ.ดร.อรจิรา สิทธิศักดิ์</b>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&nbsp;
+<b>ผศ.ดร.วิรัตน์ จารีวงศ์ไพบูลย์</b>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;
+<b>ผศ.ดร. เสาวลักษณ์ วรรธนาภา</b>
+
+
+
+<br><br>
+<img  src="Location.png" width=20" height="20"/>อาคาร LC-2 ชั้น 2 ห้อง 210&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;&nbsp;&nbsp;&nbsp;
+<img  src="Location.png" width=20" height="20"/>อาคาร LC-2 ชั้น 2 ห้อง 210&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img  src="Location.png" width=20" height="20"/>อาคาร LC-2 ชั้น 2 ห้อง 211
+<br>
+
+
+ <img  src="call.png"width=20" height="20" />02-564-4444 ต่อ 2157 ต่อ 202&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&nbsp;&nbsp;
+ <img  src="call.png"width=20" height="20" />02-564-4444 ต่อ 2157 ต่อ 215&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <img  src="call.png"width=20" height="20" />02-564-4444 ต่อ 2157 ต่อ 214
+
+
+
+<br>
+ <img  src="mail.png"width=22" height="15" />onjira@staff.tu.ac.th&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;&ensp;&ensp;&emsp;&emsp;&ensp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <img  src="mail.png"width=22" height="15" />wirat@staff.tu.ac.th&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;&ensp;&emsp;&emsp;&emsp;&ensp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <img  src="mail.png"width=22" height="15" />wsaowalu@staff.tu.ac.th
+<br><br><br>
+
+
+
+
+
+<img  src="t13.jpg"  width="209" height="258"/>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+&emsp;&emsp;&emsp;&emsp;
+<img  src="t14.jpg"  width="209" height="258"/>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+&emsp;&emsp;&emsp;&emsp;&emsp;
+<img  src="t15.jpg"  width="209" height="258"/>
+<p style="font-family:verdana">
+
+  <b>ผศ.ดร.มนวรรัตน์ ผ่องไพบูลย์</b>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;
+<b>ผศ.ดร. วนิดา พฤทธิวิทยา</b>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>อ.ดร.ปกป้อง ส่องเมือง</b>
+
+
+
+<br><br>
+<img  src="Location.png" width=20" height="20"/>อาคาร LC-2 ชั้น 2 ห้อง 210&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;&nbsp;&nbsp;&nbsp;
+<img  src="Location.png" width=20" height="20"/>อาคาร LC-2 ชั้น 2 ห้อง 210&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img  src="Location.png" width=20" height="20"/>อาคาร LC-2 ชั้น 2 ห้อง 210
+<br>
+
+
+ <img  src="call.png"width=20" height="20" />02-564-4444 ต่อ 2157 ต่อ 219&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&nbsp;&nbsp;
+ <img  src="call.png"width=20" height="20" />02-564-4444 ต่อ 2157 ต่อ 230,226&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <img  src="call.png"width=20" height="20" />02-564-4444 ต่อ 2157 ต่อ 213
+
+
+
+<br>
+ <img  src="mail.png"width=22" height="15" />pmonvora@staff.tu.ac.th&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;&ensp;&ensp;&emsp;&nbsp;&nbsp;
+ <img  src="mail.png"width=22" height="15" />wanidap@cs.tu.ac.th&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;&ensp;&emsp;&emsp;&emsp;&ensp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <img  src="mail.png"width=22" height="15" />pokpongs@staff.tu.ac.th
+<br><br><br>
+
+
+
+
+
+
+<img  src="t16.jpg" width="209" height="258" />&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+&emsp;&emsp;&emsp;&emsp;
+<img  src="t17.jpg"  width="209" height="258"/>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+&emsp;&emsp;&emsp;&emsp;&emsp;
+<img  src="t18.jpg" width="209" height="258" />
+<p style="font-family:verdana">
+
+  <b>ผศ.ดร.ประภาพร รัตนธำรง</b>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;
+<b>อ.นุชชากร งามเสาวรส</b>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>อาจารย์สิริกันยา นิลพานิช</b>
+
+
+
+<br><br>
+<img  src="Location.png" width=20" height="20"/>อาคาร LC-2 ชั้น 2 ห้อง 210&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;&nbsp;&nbsp;&nbsp;
+<img  src="Location.png" width=20" height="20"/>อาคาร LC-2 ชั้น 2 ห้อง 210&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img  src="Location.png" width=20" height="20"/>อาคาร LC-2 ชั้น 2 ห้อง 211
+<br>
+
+
+ <img  src="call.png"width=20" height="20" />02-564-4444 ต่อ 2157 ต่อ 225&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;&nbsp;
+ <img  src="call.png"width=20" height="20" />02-564-4444 ต่อ 2157 ต่อ 228&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;
+ <img  src="call.png"width=20" height="20" />02-564-4444 ต่อ 2157 ต่อ 218
+
+
+
+<br>
+ <img  src="mail.png"width=22" height="15" />rattanat@staff.tu.ac.th&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;&ensp;&ensp;&emsp;&emsp;&ensp;
+ <img  src="mail.png"width=22" height="15" />nng@cs.tu.ac.th&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;&ensp;&emsp;&emsp;&emsp;&ensp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <img  src="mail.png"width=22" height="15" />skn@cs.tu.ac.th
+<br><br><br>
+
+
+
+
+
+
+<img  src="t19.jpg" width="209" height="258" />&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+&emsp;&emsp;&emsp;&emsp;
+<img  src="t20.jpg" width="209" height="258" />&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+&emsp;&emsp;&emsp;&emsp;&emsp;
+<img  src="t21.jpg" width="209" height="258" />
+<p style="font-family:verdana">
+
+  <b>อ.ดร.กฤตคม ศรีจิรานนท์</b>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;
+<b>อ.ปกรณ์ แววสว่างวงศ์</b>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>อ.ดร.ลัมพาพรรณ พันธ์ชูจิตร์</b>
+
+
+
+<br><br>
+<img  src="Location.png" width=20" height="20"/>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;&ensp;&nbsp;&nbsp;
+<img  src="Location.png" width=20" height="20"/>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img  src="Location.png" width=20" height="20"/>อาคาร LC-2 ชั้น 2 ห้อง 224
+<br>
+
+
+ <img  src="call.png"width=20" height="20" />0-5426-8701 ต่อ 5625&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;&ensp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <img  src="call.png"width=20" height="20" />&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <img  src="call.png"width=20" height="20" />02-546-4444 ต่อ 2157 ต่อ 224
+
+
+
+<br>
+ <img  src="mail.png"width=22" height="15" />ch_krit@staff.tu.ac.th&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;&ensp;&ensp;&emsp;&emsp;&ensp;&nbsp;&nbsp;
+ <img  src="mail.png"width=22" height="15" />wpakorn@staff.tu.ac.th&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;&ensp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <img  src="mail.png"width=22" height="15" />lumpapun_@sci.tu.ac.th
+<br><br><br>
+
+
+
+
+
+
+
+<img  src="t22.jpg"  width="209" height="258"/>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+<img  src="t23.jpg" width="209" height="258" />
+
+<p style="font-family:verdana">
+	&emsp;
+  <b>อ.ดร.ฐาปนา บุญชู</b>&emsp;&emsp;&emsp;&nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>อ.ดร.นุชจรินทร์ อินต๊ะหล้า</b>
+
+
+
+
+<br><br>
+<img  src="Location.png" width=20" height="20"/>อาคาร LC-2 ชั้น 2 ห้อง 222&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;&nbsp;&nbsp;
+<img  src="Location.png" width=20" height="20"/>อาคาร LC-2 ชั้น 2 
+
+<br>
+
+
+ <img  src="call.png"width=20" height="20" />02-564-4444 ต่อ 213 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;&ensp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ <img  src="call.png"width=20" height="20" />02-564-4444 ต่อ 2157 ต่อ 222
+
+
+
+
+<br>
+ <img  src="mail.png"width=22" height="15" />thapana@cs.tu.ac.th&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&ensp;&ensp;&ensp;&emsp;&nbsp;&nbsp;&nbsp;&ensp;&nbsp;&nbsp;
+ <img  src="mail.png"width=22" height="15" />njrin@tu.ac.th
+<br><br><br>
+
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<script>
+//Get the button
+var mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+		</div>
+			
+        
+    </div>
+
+    </form> 
+    
+</body>
+
+    <script src="index.js"></script>
+</html>

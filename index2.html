@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>UI form 1.0</title>
+	<style>
+		html, body
+{
+    width: 100%;
+    height: 100%;
+}
+body {
+    height: 100vh;
+    margin:0;
+    padding:0;
+    background-color:rgb(255, 209, 63);
+}
+
+.leftBar {
+    background-color:rgb(195, 0, 47);
+    width: 250px;
+    height: 210%;
+    position:absolute;
+    background-attachment: fixed;
+    
+}
+
+.profile {
+    width:250px;
+    height:200px;
+    background-color:lightgray;
+    margin-top:-80%;
+}
+
+.profile img {
+    position:relative;
+    margin-left:30%;
+    margin-top: 10%;
+    
+    
+}
+
+.profile p {
+    text-align:center;
+    line-height: 10px;
+}
+
+.list button {
+    margin-left:9%;
+    margin-top: 7%;
+    background-color:rgb(255, 209, 63);
+    width:200px;
+    height:50px;
+}
+
+.topPage {
+    background-color:rgb(195, 0, 47);
+    width:100%;
+    height:200px;
+    z-index:-2;
+}
+
+.topPage img{
+    margin-left:52%;
+    margin-top:1%;
+}
+
+.topPage p {
+    font-size:18px;
+    z-index:2px;
+    text-align:center;
+    padding-left:18%;
+    padding-top:10px;
+    margin-top:-5px;
+    color:white;
+    font-family: cursive;
+}
+.R{
+    
+    margin-top: 30px ;
+    text-align:center;
+    margin-right: 20px;
+    line-height:40px;
+    margin-left:20%;
+    position:relative;
+}
+
+#day {
+    margin-left:80%;
+}
+
+#day_tag {
+    margin-left:80%;
+}
+
+.L{
+    margin-top: 30px ;
+    text-align:left;
+    margin-left: 10px;
+}
+
+.R input {
+    border-radius:2px;
+    border:none;
+    border-bottom:2px solid black;
+    background-color:rgb(212, 209, 200) ;
+}
+
+#add_btn {
+    background-color:rgb(75, 196, 75);
+    border:none;
+}
+
+#add_btn2 {
+    background-color:rgb(75, 196, 75);
+    border:none;
+}
+
+#remove_btn {
+    border:none;
+    background-color:rgb(214, 80, 80);
+}
+
+#remove_btn2 {
+    border:none;
+    background-color:rgb(214, 80, 80);
+
+}
+
+
+#table {
+    margin-left:12%;
+    border-collapse: collapse;
+    
+    
+}
+#table2 {
+    margin-left:11%;
+    border-collapse: collapse;
+    
+}
+
+th,td {
+    border:2px solid black;
+}
+
+
+
+
+
+
+
+	</style>
+</head>
+
+<body onload="showFile()">
+
+	<div class="topPage">
+		<img src="tu.png" alt="Thammasat-Logo" width="140" height="140">
+		<p><b>คำร้องเพิ่ม-ถอนรายวิชาล่าช้า คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยธรรมศาสตร์ ศูนย์รังสิต</b></p>
+
+	</div>
+
+	<div class="leftBar" id="bar">
+		<div class="profile">
+			<img src="mr-anonymous.png" alt="profile-pic" width="100" height="90">
+			<p>นายรักโดม ธรรมศาสตร์</p>
+			<p>6309123567</p>
+		</div>
+
+		<div class="list">
+			<button>ประวัตินักศึกษา</button>
+			<button>ตารางเรียน</button>
+			<button onclick="location.href='index.html'">เพิ่ม-ถอนรายวิชาล่าช้า</button>
+            <button>คู่มือการจดทะเบียน</button>
+            <button onclick="location.href='contact.html'">ติดต่ออาจารย์ที่เกี่ยวข้อง</button>
+            <button>ติดตามผลคำร้อง</button>
+            <button>ประเมินผู้สอน</button>
+            <button onclick="location.href='Userstory1.html'">ออกจากระบบ</button>
+		</div>
+	</div>
+
+	<div class="R">
+		<form>
+			<label for="day" id="day_tag">วัน/เดือน/ปี</label>
+			<input name="day" type="date" id="day" readonly>
+			<p class="L"><b>เรื่อง</b> ขอเพิ่ม-ถอน รายวิชา<br>
+				<b>เรียน</b> คณบดีคณะวิทยาศาสตร์และเทคโนโลยี
+			</p>
+			<label> &emsp;&emsp;&emsp;ข้าพเจ้า (</label>
+			<input type="radio" id="male" name="male" value="นาย" readonly> นาย
+
+			<input type="radio" id="female" name="female" value="นาง" readonly> นาง
+
+			<input type="radio" id="females" name="females" value="นางสาว" readonly> นางสาว )
+			<input size="40" id="stdName" name="stdName" type="text" placeholder="ชื่อ - สกุล" readonly />
+			<label>เลขทะเบียน</label>
+			<input size="20" id="stdId" name="stdId" type="number" placeholder="เลขทะเบียนนักศึกษา 10 หลัก" readonly />
+			<label>ชั้นปีที่</label>
+			<input size="5" id="stdYear" name="stdYear" type="number" min="1" max="7" placeholder=" ปีที่"
+				readonly /><br>
+			<label>สาขาวิชา</label>
+			<input size="30" id="stdFiels" name="stdFiels" type="text" placeholder="ในคณะวิทยาศาสตร์และเทคโนโลยี"
+				readonly />
+			<label>ที่อยู่ที่สามารถติดต่อได้ทางไปรษณีย์ บ้านเลขที่</label>
+			<input size="8" id="addressNumber" name="addressNumber" type="text" readonly />
+			<label>หมู่ที่</label>
+			<input size="8" id="moo" name="moo" type="text" readonly />
+			<label>ตำบล</label>
+			<input size="10" id="tumbol" name="tumbol" type="text" readonly /><br>
+			<label>อำเภอ</label>
+			<input size="11" id="amphur" name="amphur" type="text" readonly />
+			<label>จังหวัด</label>
+			<input size="18" id="province" name="province" type="text" readonly />
+			<label>รหัสไปรษณีย์</label>
+			<input size="6" id="postalCode" name="postalCode" type="text" readonly />
+			<label>โทรศัพท์มือถือ</label>
+			<input size="10" id="mobilePhone" name="mobilePhone" type="text" readonly />
+			<label>โทรศัพท์บ้าน (ถ้ามี)</label>
+			<input size="10" id="phone" name="phone" type="text" readonly /><br>
+			<label>อาจารย์ที่ปรึกษา</label>
+			<input size="125" id="advisor" name="advisor" type="text" placeholder="     ชื่ออาจารย์ที่ปรึกษา"
+				readonly />
+			<div style="margin-top: 3%;">
+				<label for="add">มีความประสงค์ขอเพิ่มจำนวน(</label>
+				<select id="add" name="add" required>
+					<option selected> </option>
+					<option value="0">&nbsp 0 &nbsp</option>
+					<option value="1">&nbsp 1 &nbsp</option>
+					<option value="2">&nbsp 2 &nbsp</option>
+					<option value="3">&nbsp 3 &nbsp</option>
+					<option value="4">&nbsp 4 &nbsp</option>
+					<option value="5">&nbsp 5 &nbsp</option>
+					<option value="6">&nbsp 6 &nbsp</option>
+					<option value="7">&nbsp 7 &nbsp</option>
+					<option value="8">&nbsp 8 &nbsp</option>
+					<option value="9">&nbsp 9 &nbsp</option>
+					<option value="10">&nbsp 10 &nbsp</option>
+				</select>)
+
+				<label for="drop"> ถอนจำนวน(</label>
+				<select id="drop" name="drop" required>
+					<option selected> </option>
+					<option value="0">&nbsp 0 &nbsp</option>
+					<option value="1">&nbsp 1 &nbsp</option>
+					<option value="2">&nbsp 2 &nbsp</option>
+					<option value="3">&nbsp 3 &nbsp</option>
+					<option value="4">&nbsp 4 &nbsp</option>
+					<option value="5">&nbsp 5 &nbsp</option>
+					<option value="6">&nbsp 6 &nbsp</option>
+					<option value="7">&nbsp 7 &nbsp</option>
+					<option value="8">&nbsp 8 &nbsp</option>
+					<option value="9">&nbsp 9 &nbsp</option>
+					<option value="10">&nbsp 10 &nbsp</option>
+				</select>)
+
+				<table style="width:100%">
+					<tr>
+						<th>ลำดับ</th>
+						<th>รหัสวิชา</th>
+						<th>ชื่อวิชา</th>
+						<th>Section</th>
+						<th>วัน/เวลา</th>
+						<th>หน่วยกิต</th>
+						<th>ชื่อผู้สอน</th>
+						<th> เพิ่ม/ถอน</th>
+						<th>อนุญาติ</th>
+					</tr>
+					<tr>
+						<td>1.</td>
+						<td><input class="table" type="text" id="scode1" name="scode1" style="width:150px" readonly></td>
+						<td><input class="table" type="text" id="nsub1" name="nsub1" style="width:200px" readonly></td>
+						<td><input class="table" type="text" id="sec1" name="sec1" style="width:100px" readonly></td>
+						<td><input class="table" type="text" id="date1" name="date1" style="width:100px" readonly></td>
+						<td><input class="table" type="text" id="cd1" name="cd1" style="width:50px" readonly></td>
+						<td><input class="table" type="text" id="tn1" name="tn1" style="width:250px" readonly></td>
+						<td><select class="table" id="adddrop1" name="adddrop1">
+								<option selected> </option>
+								<option value="add1">&nbsp เพิ่ม &nbsp</option>
+								<option value="drop1">&nbsp ถอน &nbsp</option>
+						</td>
+						<td><input class="table" type="checkbox" id="pm1" name="pm1" style="width:50px" readonly></td>
+					</tr>
+					<tr>
+						<td>2.</td>
+						<td><input class="table" type="text" id="scode2" name="scode2" style="width:150px" readonly></td>
+						<td><input class="table" type="text" id="nsub2" name="nsub2" style="width:200px" readonly></td>
+						<td><input class="table" type="text" id="sec2" name="sec2" style="width:100px" readonly></td>
+						<td><input class="table" type="text" id="date2" name="date2" style="width:100px" readonly></td>
+						<td><input class="table" type="text" id="cd2" name="cd2" style="width:50px" readonly></td>
+						<td><input class="table" type="text" id="tn2" name="tn2" style="width:250px" readonly></td>
+						<td><select class="table" id="adddrop2" name="adddrop2">
+								<option selected> </option>
+								<option value="add2">&nbsp เพิ่ม &nbsp</option>
+								<option value="drop2">&nbsp ถอน &nbsp</option>
+						</td>
+						<td><input class="table" type="checkbox" id="pm2" name="pm2" style="width:50px" readonly></td>
+					</tr>
+					<tr>
+						<td>3.</td>
+						<td><input class="table" type="text" id="scode3" name="scode3" style="width:150px" readonly></td>
+						<td><input class="table" type="text" id="nsub3" name="nsub3" style="width:200px" readonly></td>
+						<td><input class="table" type="text" id="sec3" name="sec3" style="width:100px" readonly></td>
+						<td><input class="table" type="text" id="date3" name="date3" style="width:100px" readonly></td>
+						<td><input class="table" type="text" id="cd3" name="cd3" style="width:50px" readonly></td>
+						<td><input class="table" type="text" id="tn3" name="tn3" style="width:250px" readonly></td>
+						<td><select class="table" id="adddrop3" name="adddrop3">
+								<option selected> </option>
+								<option value="add3">&nbsp เพิ่ม &nbsp</option>
+								<option value="drop3">&nbsp ถอน &nbsp</option>
+						</td>
+						<td><input class="table" type="checkbox" id="pm3" name="pm3" style="width:50px" readonly></td>
+					</tr>
+					<tr>
+						<td>4.</td>
+						<td><input class="table" type="text" id="scode4" name="scode4" style="width:150px" readonly></td>
+						<td><input class="table" type="text" id="nsub4" name="nsub4" style="width:200px" readonly></td>
+						<td><input class="table" type="text" id="sec4" name="sec4" style="width:100px" readonly></td>
+						<td><input class="table" type="text" id="date4" name="date4" style="width:100px" readonly></td>
+						<td><input class="table" type="text" id="cd4" name="cd4" style="width:50px" readonly></td>
+						<td><input class="table" type="text" id="tn4" name="tn4" style="width:250px" readonly></td>
+						<td><select class="table" id="adddrop4" name="adddrop4">
+								<option selected> </option>
+								<option value="add4">&nbsp เพิ่ม &nbsp</option>
+								<option value="drop4">&nbsp ถอน &nbsp</option>
+						</td>
+						<td><input class="table" type="checkbox" id="pm4" name="pm4" style="width:50px" readonly></td>
+					</tr>
+					<tr>
+						<td>5.</td>
+						<td><input class="table" type="text" id="scode5" name="scode5" style="width:150px" readonly></td>
+						<td><input class="table" type="text" id="nsub5" name="nsub5" style="width:200px" readonly></td>
+						<td><input class="table" type="text" id="sec5" name="sec5" style="width:100px" readonly></td>
+						<td><input class="table" type="text" id="date5" name="date5" style="width:100px" readonly></td>
+						<td><input class="table" type="text" id="cd5" name="cd5" style="width:50px" readonly></td>
+						<td><input class="table" type="text" id="tn5" name="tn5" style="width:250px" readonly></td>
+						<td><select class="table" id="adddrop5" name="adddrop5">
+								<option selected> </option>
+								<option value="add5">&nbsp เพิ่ม &nbsp</option>
+								<option value="drop5">&nbsp ถอน &nbsp</option>
+						</td>
+						<td><input class="table" type="checkbox" id="pm5" name="pm5" style="width:50px" readonly></td>
+					</tr>
+					<tr>
+						<td>6.</td>
+						<td><input class="table" type="text" id="scode6" name="scode6" style="width:150px" readonly></td>
+						<td><input class="table" type="text" id="nsub6" name="nsub6" style="width:200px" readonly></td>
+						<td><input class="table" type="text" id="sec6" name="sec6" style="width:100px" readonly></td>
+						<td><input class="table" type="text" id="date6" name="date6" style="width:100px" readonly></td>
+						<td><input class="table" type="text" id="cd6" name="cd6" style="width:50px" readonly></td>
+						<td><input class="table" type="text" id="tn6" name="tn6" style="width:250px" readonly></td>
+						<td><select class="table" id="adddrop6" name="adddrop6">
+								<option selected> </option>
+								<option value="add6">&nbsp เพิ่ม &nbsp</option>
+								<option value="drop6">&nbsp ถอน &nbsp</option>
+						</td>
+						<td><input class="table" type="checkbox" id="pm6" name="pm6" style="width:50px" readonly></td>
+					</tr>
+					<tr>
+						<td>7.</td>
+						<td><input class="table" type="text" id="scode7" name="scode7" style="width:150px" readonly></td>
+						<td><input class="table" type="text" id="nsub7" name="nsub7" style="width:200px" readonly></td>
+						<td><input class="table" type="text" id="sec7" name="sec7" style="width:100px" readonly></td>
+						<td><input class="table" type="text" id="date7" name="date7" style="width:100px" readonly></td>
+						<td><input class="table" type="text" id="cd7" name="cd7" style="width:50px" readonly></td>
+						<td><input class="table" type="text" id="tn7" name="tn7" style="width:250px" readonly></td>
+						<td><select class="table" id="adddrop7" name="adddrop7">
+								<option selected> </option>
+								<option value="add7">&nbsp เพิ่ม &nbsp</option>
+								<option value="drop7">&nbsp ถอน &nbsp</option>
+						</td>
+						<td><input class="table" type="checkbox" id="pm7" name="pm7" style="width:50px" readonly></td>
+					</tr>
+					<tr>
+						<td>8.</td>
+						<td><input class="table" type="text" id="scode8" name="scode8" style="width:150px" readonly></td>
+						<td><input class="table" type="text" id="nsub8" name="nsub8" style="width:200px" readonly></td>
+						<td><input class="table" type="text" id="sec8" name="sec8" style="width:100px" readonly></td>
+						<td><input class="table" type="text" id="date8" name="date8" style="width:100px" readonly></td>
+						<td><input class="table" type="text" id="cd8" name="cd8" style="width:50px" readonly></td>
+						<td><input class="table" type="text" id="tn8" name="tn8" style="width:250px" readonly></td>
+						<td><select class="table" id="adddrop8" name="adddrop8">
+								<option selected> </option>
+								<option value="drop8">&nbsp เพิ่ม &nbsp</option>
+								<option value="drop8">&nbsp ถอน &nbsp</option>
+						</td>
+						<td><input class="table" type="checkbox" id="pm8" name="pm8" style="width:50px" readonly></td>
+					</tr>
+					<tr>
+						<td>9.</td>
+						<td><input class="table" type="text" id="scode9" name="sccode9" style="width:150px" readonly></td>
+						<td><input class="table" type="text" id="nsub9" name="nsub9" style="width:200px" readonly></td>
+						<td><input class="table" type="text" id="sec9" name="sec9" style="width:100px" readonly></td>
+						<td><input class="table" type="text" id="date9" name="date9" style="width:100px" readonly></td>
+						<td><input class="table" type="text" id="cd9" name="cd9" style="width:50px" readonly></td>
+						<td><input class="table" type="text" id="tn9" name="tn9" style="width:250px" readonly></td>
+						<td><select class="table" id="adddrop9" name="adddrop9">
+								<option selected> </option>
+								<option value="add9">&nbsp เพิ่ม &nbsp</option>
+								<option value="drop9">&nbsp ถอน &nbsp</option>
+						</td>
+						<td><input class="table" type="checkbox" id="pm9" name="pm9" style="width:50px" readonly></td>
+					</tr>
+					<tr>
+						<td>10.</td>
+						<td><input class="table" type="text" id="scode10" name="scode10" style="width:150px" readonly></td>
+						<td><input class="table" type="text" id="nsub10" name="nsub10" style="width:200px" readonly></td>
+						<td><input class="table" type="text" id="sec10" name="sec10" style="width:100px" readonly></td>
+						<td><input class="table" type="text" id="date10" name="date10" style="width:100px" readonly></td>
+						<td><input class="table" type="text" id="cd10" name="cd10" style="width:50px" readonly></td>
+						<td><input class="table" type="text" id="tn10" name="tn10" style="width:250px" readonly></td>
+						<td><select class="table" id="adddrop10" name="adddrop10">
+								<option selected> </option>
+								<option value="add10">&nbsp เพิ่ม &nbsp</option>
+								<option value="rem10">&nbsp ถอน &nbsp</option>
+						</td>
+						<td><input class="table" type="checkbox" id="pm10" name="pm10" style="width:50px" readonly></td>
+					</tr>
+				</table>
+				<br><br>
+			<label><b>ไฟล์เเนบหลักฐาน(ถ้ามี)</b></label><br>
+			<label >รายชื่อไฟล์ที่อัพโหลด </label>
+			<div class="filelist"></div>
+            <br>
+			<br>
+     
+				<label><b>เหตุผลที่ขอ เพิ่ม/ถอน</b></label><br>
+				<textarea name="reason" id="reason" rows="8" cols="120" style="margin-left:42px" readonly></textarea>
+				<br><br>
+				<input style="margin-bottom:20px;color: white;background-color: black;padding:15px" type="submit"
+					value="Edit" id="edit" formaction="index.html">
+				<input style="margin-bottom:20px;color: white;background-color: black;padding:15px" type="submit"
+					value="Submit" id="submit" onclick="send()">
+			</div>
+
+
+	</div>
+
+	</form>
+
+</body>
+
+<script src="index.js"></script>
+
+</html>
